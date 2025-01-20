@@ -11,10 +11,10 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: 'https://3wtask.netlify.app', 
+  origin: 'https://dashing-tartufo-a72bbc.netlify.app', // Allow only this origin
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
-
 }));
+
 
 // Database Connection
 mongoose
