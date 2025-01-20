@@ -10,8 +10,12 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
-
+// Allow CORS for specific origin (in this case, your local frontend URL)
+app.use(cors({
+  origin: '*', // Allows requests from any origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+}));
 
 // Database Connection
 mongoose
