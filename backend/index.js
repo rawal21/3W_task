@@ -10,10 +10,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 
-app.use(cors({
-  origin: 'https://dashing-tartufo-a72bbc.netlify.app', // Allow only this origin
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
-}));
+app.use(cors());
 
 
 // Database Connection
