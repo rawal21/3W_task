@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRoutes');
-const path = require('path');
 const cors = require('cors');
 const MONGO_URL  = process.env.MONGO_URL;
 
@@ -12,9 +11,9 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: 'https://sprightly-kelpie-3a4a56.netlify.app', 
+  origin: 'https://3wtask.netlify.app', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
-  // allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+
 }));
 
 // Database Connection
