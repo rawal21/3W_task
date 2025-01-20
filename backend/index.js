@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors({
   origin: 'https://sprightly-kelpie-3a4a56.netlify.app', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+  // allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
 }));
 
 // Database Connection
