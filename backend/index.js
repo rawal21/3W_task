@@ -10,9 +10,9 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-// Allow CORS for specific origin (in this case, your local frontend URL)
+
 app.use(cors({
-  origin: 'http://localhost:5175', // Allows requests from any origin
+  origin: 'https://sprightly-kelpie-3a4a56.netlify.app', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
 }));
