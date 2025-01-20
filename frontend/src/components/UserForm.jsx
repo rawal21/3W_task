@@ -25,7 +25,7 @@ const UserForm = () => {
     Array.from(images).forEach((image) => data.append('images', image));
 
     try {
-      await axios.post('https://3w-task.vercel.app/api/users', data);
+      await axios.post('https://3-w-task-rawal21s-projects.vercel.app/api/users', data);
       alert('Submission successful!');
     } catch (err) {
       console.error(err);

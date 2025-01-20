@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 // Allow CORS for specific origin (in this case, your local frontend URL)
 app.use(cors({
-  origin: '*', // Allows requests from any origin
+  origin: 'http://localhost:5175', // Allows requests from any origin
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
 }));

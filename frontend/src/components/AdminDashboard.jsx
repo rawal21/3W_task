@@ -9,7 +9,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const { data } = await axios.get('https://3w-task.vercel.app/api/users'); 
+        const { data } = await axios.get('https://3-w-task-rawal21s-projects.vercel.app/api/users'); 
         setUsers(data);
       } catch (err) {
         console.error(err);
