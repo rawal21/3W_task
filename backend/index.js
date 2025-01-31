@@ -10,14 +10,17 @@ const app = express();
 // Middleware
 app.use(express.json());
 
-app.use(cors());
-
-
+// CORS Configuration
+app.use(cors({
+  origin: 'https://melodious-faun-c11de9.netlify.app', // Deployed frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 // Database Connection
 mongoose
   .connect(MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
   })
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error(err));
